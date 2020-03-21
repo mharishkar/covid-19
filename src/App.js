@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="app">
-      <Navbar name="Covid-19 update for India"/>
+      <Navbar title="Covid-19 update for India"/>
       <header className="app-header">
         {
           countryList.length > 0 &&
