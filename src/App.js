@@ -6,7 +6,8 @@ import EventHandler from './event';
 
 import './core/styles/app.scss';
 import Navbar from './core/components/navbar/navbar';
-import PieChart from './core/components/chart/chart';
+import CountriesListAside from './core/components/countriesList/countriesList';
+import Cards from './core/components/cards/cards'
 
 function App() {
 
@@ -35,6 +36,8 @@ function App() {
   return (
     <div className="app">
       <Navbar name="Covid-19 Worldwide Live update"/>
+      <CountriesListAside />
+      <Cards />
       <header className="app-header">
         {
           countryList.length > 0 &&
