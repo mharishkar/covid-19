@@ -25,6 +25,18 @@ const EventHanlder = ({eventName, options}) => {
 					}
 				})
 			)
+		},
+		summary: () => {
+			return (
+				fetch(`${BASE_URL}/summary`)
+				.then(res => {
+					if (res.ok) {
+						return res.json();
+					} else {
+						throw new Error('Something went wrong');
+					}
+				})
+			)
 		}
 	};
 	return event[eventName](options);
