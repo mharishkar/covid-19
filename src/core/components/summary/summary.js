@@ -9,7 +9,7 @@ const Summary = ({ dataList }) => {
 				Object.keys(dataList).map((summaryItem, index) => {
 					if (summaryItem !== 'Country' && summaryItem !== 'NewRecovered') {
 						return (
-							<div className="card u-flex__column" key={index}>
+							<div className="card u-flex__column summary__item" key={index}>
 								<div className="summary__title black-disabled">{summaryItem}</div>
 								<div className="summary__count">{dataList[summaryItem]}</div>
 							</div>

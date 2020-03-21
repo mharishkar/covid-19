@@ -55,6 +55,17 @@ code {
   html {
     font-size: 12px;
   }
+  .app {
+    .summary {
+      &__list {
+        display: block;
+      }
+      &__item {
+        display: block;
+        margin: $space--sm 0;
+      }
+    }
+  }
 }
 
 /* Desktops and laptops */
