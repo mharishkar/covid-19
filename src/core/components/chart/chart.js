@@ -5,7 +5,7 @@ const PieChart = ({ dataList }) => {
 
 	const pieOptions = {
 		title: "",
-		pieHole: 0.6,
+		pieHole: 0.4,
 		slices: [
 			{
 				color: "#2BB673"
@@ -37,7 +37,8 @@ const PieChart = ({ dataList }) => {
 			width: "100%",
 			height: "80%"
 		},
-		fontName: "Roboto"
+		fontName: "Roboto",
+		is3D: true,
 	};
 
 	const [coronaData, setCoronaData] = useState(dataList);
@@ -50,10 +51,10 @@ const PieChart = ({ dataList }) => {
 	}, [dataList]);
 
 	return (
-		<div>
+		<div className='card u-height__half'>
 			<Chart
 				width={'500px'}
-				height={'300px'}
+				height={'500px'}
 				chartType="PieChart"
 				options={pieOptions}
 				loader={<div>Loading Chart</div>}
