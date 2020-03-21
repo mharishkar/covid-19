@@ -28,6 +28,11 @@ const PieChart = ({ dataList }) => {
 				fontSize: 14
 			}
 		},
+		animation: {
+			startup: true,
+			easing: 'linear',
+			duration: 1500,
+		},
 		tooltip: {
 			showColorCode: true
 		},

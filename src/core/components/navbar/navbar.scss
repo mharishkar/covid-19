@@ -1,10 +1,8 @@
 @import "../../styles/base/all";
 
 nav {
-  background-color: #98c99f63;
-  color: $black--disabled;
+  color: $white--high;
 	padding: $space--md;
-	@include surface('2', #98c99f63);
   h2 {
     letter-spacing: 0.7px;
   }

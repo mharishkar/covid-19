@@ -6,8 +6,7 @@ import EventHandler from './event';
 
 import './core/styles/app.scss';
 import Navbar from './core/components/navbar/navbar';
-import CountriesListAside from './core/components/countriesList/countriesList';
-import Cards from './core/components/summary/summary'
+import Summary from './core/components/summary/summary'
 
 function App() {
 
@@ -34,7 +33,7 @@ function App() {
       });
     EventHandler({eventName: 'summary'})
       .then(summaryListResponse => {
-        setSummaryList(summaryListResponse);
+        setSummaryList(summaryListResponse.Countries);
       });
   }, []);
 
@@ -45,10 +44,8 @@ function App() {
   return (
     <div className="app">
       <Navbar title="Covid-19 update for India"/>
-      <div className="summary">
-        {/* TODO: place here all those summary cards */}
-        <CountriesListAside />
-        <Cards />
+      <div className="summary__list u-flex u-justify-content-space-between u-align-items-center">
+        { summaryList.length > 0 && <Summary dataList={getSummaryByCountry('India')[0]}/>}
       </div>
       <div className="app-header">
         {
