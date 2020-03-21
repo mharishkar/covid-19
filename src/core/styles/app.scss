@@ -22,6 +22,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $color--lite-black;
 }
 
 code {
@@ -33,14 +34,17 @@ code {
   width: 100%;
   .app {
     text-align: center;
+    background: #24303a;
     .app-header {
-      background-color: $color--white;
       padding: $space--md;
       min-height: calc(100vh - 42px);
       display: flex;
       justify-content: flex-start;
       align-self: flex-start;
       color: $color--white;
+    }
+    .summary__list {
+      padding: $space--md;
     }
   }
 }
@@ -50,6 +54,17 @@ code {
   /* Styles */
   html {
     font-size: 12px;
+  }
+  .app {
+    .summary {
+      &__list {
+        display: block;
+      }
+      &__item {
+        display: block;
+        margin: $space--sm 0;
+      }
+    }
   }
 }
 
