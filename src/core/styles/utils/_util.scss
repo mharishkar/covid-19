@@ -1,0 +1,143 @@
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-width {
+  &__half {
+    width: 50%;
+  }
+
+  &__full {
+    width: 100%;
+  }
+}
+
+.u-height {
+  &__half {
+    height: 50%;
+  }
+
+  &__full {
+    height: 100%;
+  }
+}
+
+.u-absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.u-fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+.u-o-hidden {
+  overflow: hidden;
+}
+
+.u-p-relative {
+  position: relative;
+}
+
+.u-pointer {
+  cursor: pointer;
+}
+
+.u-inline-block {
+  display: inline-block;
+}
+
+.u-block {
+  display: block;
+}
+
+.u-flex {
+  display: flex;
+}
+
+.u-inline-flex {
+  display: inline-flex;
+}
+
+.u-justify-content-center {
+  justify-content: center;
+}
+
+.u-align-items-center {
+  align-items: center;
+}
+
+.u-ellipses {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.u-m-auto {
+  margin: 0 auto;
+}
+
+.heading-1 {
+  @include get-typography('heading-1');
+}
+
+.heading-2 {
+  @include get-typography('heading-2');
+}
+
+.heading-3 {
+  @include get-typography('heading-3');
+}
+
+.heading-4 {
+  @include get-typography('heading-4');
+}
+
+.heading-5 {
+  @include get-typography('heading-5');
+}
+
+.heading-6 {
+  @include get-typography('heading-6');
+}
+
+.subheading-1 {
+  @include get-typography('subheading-1');
+}
+
+.subheading-2 {
+  @include get-typography('subheading-2');
+}
+
+.body-text {
+  @include get-typography('body-text');
+}
+
+.body-ui {
+  @include get-typography('body-ui');
+}
+
+.caption {
+  @include get-typography('caption');
+}
+
+.overline {
+  @include get-typography('overline');
+}
+
+.black-disabled {
+  color: $black--disabled;
+}

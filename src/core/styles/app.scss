@@ -1,0 +1,71 @@
+// 1. Base
+@import 'base/all';
+
+// 2. Components
+@import
+  'components/button',
+  'components/card';
+
+// 3. Utils
+@import 'utils/util';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
+  text-align: center;
+  .app-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+}
+
+/* Mobile (portrait and landscape) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Desktops and laptops */
+@media only screen  and (min-width : 1224px) {
+  /* Styles */
+  html {
+    font-size: 16px;
+  }
+  main {
+    padding: $space--md;
+  }
+}
+
+/* Large screens */
+@media only screen  and (min-width : 1824px) {
+  /* Styles */
+  html {
+    font-size: 22px;
+  }
+}

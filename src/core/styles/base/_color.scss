@@ -1,0 +1,26 @@
+/* 
+* possible background color's
+*/
+$color--black     : #000000;
+$color--white     : #ffffff;
+$color-lite-gray  : #d3d3d3;
+$color-dark-gray  : #808080;
+$color--gray      : #fcfcfc;
+
+/* 
+* notification colors
+*/
+$success          : #20be79;
+$error            : #d90707;
+$warning          : #B44F00;
+
+/* 
+* ink colors (with variations only for black and white)
+*/
+$white--high      : rgba($color--white, 1);
+$white--medium    : rgba($color--white, 0.91);
+$white--disabled  : rgba($color--white, 0.64);
+
+$black--high      : rgba($color--black, 0.85);
+$black--medium    : rgba($color--black, 0.64);
+$black--disabled  : rgba($color--black, 0.43);
