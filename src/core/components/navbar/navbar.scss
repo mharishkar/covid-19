@@ -1,11 +1,11 @@
-@import '../../styles/app.scss';
+@import "../../styles/base/all";
 
 nav {
-    background-color: $color--lite-black;
-    color: $color--white;
-    border-bottom: 1px solid $color--black;
-    padding: 10px 0;
-    h2 {
-        letter-spacing: 0.7px;
-    }
+  background-color: #98c99f63;
+  color: $black--disabled;
+	padding: $space--md;
+	@include surface('2', #98c99f63);
+  h2 {
+    letter-spacing: 0.7px;
+  }
 }
