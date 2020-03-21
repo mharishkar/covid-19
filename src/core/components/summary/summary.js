@@ -1,7 +1,7 @@
 import React from 'react';
-import '../cards/cards.scss';
+import './summary.scss';
 
-class Cards extends React.Component {
+class Summary extends React.Component {
     render() {
         return (
             <section className="cards">
@@ -24,4 +24,4 @@ class Cards extends React.Component {
           );
     }
 }
-export default Cards;
+export default Summary;

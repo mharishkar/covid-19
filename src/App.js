@@ -7,7 +7,7 @@ import EventHandler from './event';
 import './core/styles/app.scss';
 import Navbar from './core/components/navbar/navbar';
 import CountriesListAside from './core/components/countriesList/countriesList';
-import Cards from './core/components/cards/cards'
+import Cards from './core/components/summary/summary'
 
 function App() {
 
