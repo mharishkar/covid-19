@@ -6,6 +6,8 @@ import EventHandler from './event';
 
 import './core/styles/app.scss';
 import Navbar from './core/components/navbar/navbar';
+import CountriesListAside from './core/components/countriesList/countriesList';
+import Cards from './core/components/summary/summary'
 
 function App() {
 
@@ -45,6 +47,8 @@ function App() {
       <Navbar title="Covid-19 update for India"/>
       <div className="summary">
         {/* TODO: place here all those summary cards */}
+        <CountriesListAside />
+        <Cards />
       </div>
       <div className="app-header">
         {
