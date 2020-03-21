@@ -13,6 +13,7 @@ function App() {
 
   const [countryList, setCountryList] = useState([]);
   const [lastUpdatedDate, setLastUpdatedDate] = useState(null);
+  const [summaryList, setSummaryList] = useState([]);
 
   useEffect(() => {
     EventHandler({eventName: 'byCountry', options: { country: 'india', status: 'confirmed' }})
@@ -31,14 +32,25 @@ function App() {
           return formattedResponse;
         });
       });
+    EventHandler({eventName: 'summary'})
+      .then(summaryListResponse => {
+        setSummaryList(summaryListResponse);
+      });
   }, []);
+
+  const getSummaryByCountry = (country) => {
+    return summaryList.filter(summary => summary.Country === country);
+  }
 
   return (
     <div className="app">
-      <Navbar name="Covid-19 Worldwide Live update"/>
-      <CountriesListAside />
-      <Cards />
-      <header className="app-header">
+      <Navbar title="Covid-19 update for India"/>
+      <div className="summary">
+        {/* TODO: place here all those summary cards */}
+        <CountriesListAside />
+        <Cards />
+      </div>
+      <div className="app-header">
         {
           countryList.length > 0 &&
             <div className="card u-flex__column u-height__half u-o-scrollX">
@@ -53,7 +65,7 @@ function App() {
               <PieChart dataList={countryList} />
             </div>
         }
-      </header>
+      </div>
     </div>
   );
 }
