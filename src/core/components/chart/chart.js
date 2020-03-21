@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { Chart } from "react-google-charts";
 
 const PieChart = ({ dataList }) => {
@@ -51,16 +51,16 @@ const PieChart = ({ dataList }) => {
 	}, [dataList]);
 
 	return (
-		<div className='card u-height__half'>
+		<Fragment>
 			<Chart
 				width={'500px'}
 				height={'500px'}
 				chartType="PieChart"
 				options={pieOptions}
-				loader={<div>Loading Chart</div>}
+				loader={<div>Loading Chart ...</div>}
 				data={coronaData}
 			/>
-		</div>
+		</Fragment>
 	)
 };
 
