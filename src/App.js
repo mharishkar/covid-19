@@ -37,7 +37,7 @@ function App() {
       <header className="app-header">
         {
           countryList.length > 0 &&
-            <div className="card u-flex__column u-height__half">
+            <div className="card u-flex__column u-height__half u-o-scrollX">
               <div className="u-inline-flex u-justify-content-space-between">
                 <span className="u-text-left black-disabled">Total Cases: {countryList[countryList.length - 1][1]}</span>
                 <span className="u-text-right black-disabled">Last Update: {lastUpdatedDate}</span>

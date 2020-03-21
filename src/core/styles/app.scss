@@ -29,16 +29,19 @@ code {
     monospace;
 }
 
-.app {
-  text-align: center;
-  .app-header {
-    background-color: $color--white;
-    padding: $space--md;
-    min-height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-self: flex-start;
-    color: $color--white;
+#root {
+  width: 100%;
+  .app {
+    text-align: center;
+    .app-header {
+      background-color: $color--white;
+      padding: $space--md;
+      min-height: calc(100vh - 42px);
+      display: flex;
+      justify-content: flex-start;
+      align-self: flex-start;
+      color: $color--white;
+    }
   }
 }
 

@@ -53,8 +53,8 @@ const PieChart = ({ dataList }) => {
 	return (
 		<Fragment>
 			<Chart
-				width={'500px'}
-				height={'500px'}
+				width={'300px'}
+				height={'300px'}
 				chartType="PieChart"
 				options={pieOptions}
 				loader={<div>Loading Chart ...</div>}
