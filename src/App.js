@@ -1,15 +1,33 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
+
+import PieChart from './core/components/chart/chart';
+import EventHandler from './event';
+
 import './core/styles/app.scss';
 import Navbar from './core/components/navbar/navbar';
 import PieChart from './core/components/chart/chart';
 
 function App() {
+
+  const [countryList, setCountryList] = useState([]);
+
+  useEffect(() => {
+    EventHandler({eventName: 'byCountry', options: { country: 'india', status: 'confirmed' }})
+      .then(res => {
+        console.log(res);
+        setCountryList(res);
+      });
+  }, []);
+
   return (
     <div className="app">
       <Navbar name="Covid-19 Worldwide Live update"/>
       <header className="app-header">
         <h4 className="heading-4">Covid-19 Real time data</h4>
-        <PieChart />
+        {
+          countryList.length > 0 &&
+            <PieChart dataList={countryList} />
+        }
       </header>
     </div>
   );
