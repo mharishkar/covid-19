@@ -48,6 +48,10 @@
   overflow: hidden;
 }
 
+.u-o-scrollX {
+  overflow-x: scroll;
+}
+
 .u-p-relative {
   position: relative;
 }
@@ -72,15 +76,23 @@
   display: inline-flex;
 }
 
+.u-flex__column {
+  flex-direction: column;
+}
+
 .u-justify-content-center {
   justify-content: center;
+}
+
+.u-justify-content-space-between {
+  justify-content: space-between;
 }
 
 .u-align-items-center {
   align-items: center;
 }
 
-.u-ellipses {
+.u-ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -140,4 +152,8 @@
 
 .black-disabled {
   color: $black--disabled;
+}
+
+.black {
+  color: $black--high;
 }
