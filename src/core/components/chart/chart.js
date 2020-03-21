@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Chart } from "react-google-charts";
 
-const PieChart = (props) => {
+const PieChart = ({ dataList }) => {
+
 	const pieOptions = {
 		title: "",
 		pieHole: 0.6,
@@ -38,6 +39,16 @@ const PieChart = (props) => {
 		},
 		fontName: "Roboto"
 	};
+
+	const [coronaData, setCoronaData] = useState(dataList);
+
+	useEffect(() => {
+		setCoronaData((prevState) => {
+			prevState.unshift(['Count', 'Day']);
+			return prevState;
+		})
+	}, [dataList]);
+
 	return (
 		<div>
 			<Chart
@@ -46,14 +57,7 @@ const PieChart = (props) => {
 				chartType="PieChart"
 				options={pieOptions}
 				loader={<div>Loading Chart</div>}
-				data={[
-					['Task', 'Hours per Day'],
-					['Work', 11],
-					['Eat', 2],
-					['Commute', 2],
-					['Watch TV', 2],
-					['Sleep', 7],
-				]}
+				data={coronaData}
 			/>
 		</div>
 	)

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import dayjs from 'dayjs'
 
 import PieChart from './core/components/chart/chart';
 import EventHandler from './event';
@@ -12,9 +13,13 @@ function App() {
 
   useEffect(() => {
     EventHandler({eventName: 'byCountry', options: { country: 'india', status: 'confirmed' }})
-      .then(res => {
-        console.log(res);
-        setCountryList(res);
+      .then(coronaResultByCountry => {
+        setCountryList((prevState) => {
+          coronaResultByCountry = coronaResultByCountry.map(day => {
+            return [dayjs(day.Date).format('DD/MM/YYYY'), day.Cases];
+          });
+          return coronaResultByCountry;
+        });
       });
   }, []);
 
